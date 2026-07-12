@@ -83,7 +83,7 @@ ul, ol { list-style: none; }
   color: var(--color-primary);
   margin-bottom: 8px;
   line-height: var(--leading-tight);
-  letter-spacing: var(--tracking-wide);
+  letter-spacing: -0.01em;
 }
 .section-subtitle {
   text-align: center;
@@ -384,7 +384,7 @@ ul, ol { list-style: none; }
   padding: 48px 0;
   text-align: center;
 }
-.cta-title { font-size: var(--text-2xl); font-weight: 700; margin-bottom: 8px; }
+.cta-title { font-size: var(--text-2xl); font-weight: 700; margin-bottom: 8px; letter-spacing: -0.01em; }
 .cta-sub { opacity: 0.85; margin-bottom: 28px; }
 .cta-phone {
   font-family: var(--font-phone);
