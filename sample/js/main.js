@@ -2,6 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  /* ---- 横スクロールテーブルのスクロールヒント（scroll-hint 読込ページのみ） ---- */
+  if (typeof ScrollHint !== 'undefined' && document.querySelector('.js-scrollable')) {
+    new ScrollHint('.js-scrollable', {
+      suggestiveShadow: true,
+      i18n: { scrollable: 'スクロールできます' }
+    });
+  }
+
   /* ---- ハンバーガーメニュー ---- */
   const toggle = document.querySelector('.nav-toggle');
   const mobileNav = document.querySelector('.mobile-nav');

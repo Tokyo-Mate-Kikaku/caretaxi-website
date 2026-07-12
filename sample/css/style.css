@@ -61,6 +61,7 @@ body {
   font-family: var(--font-sans);
   color: var(--color-text);
   line-height: var(--leading-normal);
+  letter-spacing: -0.01em;
   background: var(--color-bg);
 }
 
@@ -421,6 +422,15 @@ ul, ol { list-style: none; }
 .price-table tr:last-child td { border-bottom: none; }
 .price-table tr:nth-child(even) td { background: var(--color-bg-light); }
 .price-table .price-amount { font-weight: 700; color: var(--color-accent); font-size: var(--text-lg); }
+
+/* 料金表：狭い画面では横スクロールで見せ、項目名・金額の途中改行を防ぐ（説明文の最終列のみ自然折り返し） */
+.price-table { min-width: 500px; }
+.price-table th, .price-table td { white-space: nowrap; vertical-align: middle; }
+.price-table th:last-child, .price-table td:last-child { white-space: normal; min-width: 180px; }
+
+/* 料金の目安（参考）テーブル：狭い画面では横スクロールで見せ、金額・ラベルの途中改行を防ぐ */
+.fare-guide { min-width: 460px; }
+.fare-guide th, .fare-guide td { white-space: nowrap; vertical-align: middle; }
 
 /* ----- FAQ アコーディオン ----- */
 .faq-list { max-width: 800px; margin: 0 auto; }
