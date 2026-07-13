@@ -18,7 +18,7 @@
   --color-bg-warm:       #FDF6EE;
   --color-border:        #DCEAE1;
 
-  --font-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  --font-sans: "Hiragino Kaku Gothic ProN", "Hiragino Sans", 'Noto Sans JP', sans-serif;
   --font-phone: 'Oswald', 'Noto Sans JP', sans-serif;
 
   --text-xs:   12px;
