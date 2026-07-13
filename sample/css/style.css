@@ -130,7 +130,7 @@ ul, ol { list-style: none; }
   line-height: 1.3;
 }
 .header-phone-label { font-size: var(--text-xs); opacity: 0.85; }
-.header-phone-num { font-family: var(--font-phone); font-size: 22px; font-weight: 700; letter-spacing: 0.05em; color: #FFE08A; }
+.header-phone-num { font-family: var(--font-phone); font-size: 22px; letter-spacing: 0.05em; color: #FFE08A; }
 .header-phone-hour { font-size: var(--text-xs); opacity: 0.75; }
 
 .site-nav { display: none; }
@@ -229,7 +229,7 @@ ul, ol { list-style: none; }
 .btn-line {
   background-color: #06C755;
   color: #fff;
-  box-shadow: 0 4px 14px rgba(6,199,85,0.35), 4px 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 14px rgba(6,199,85,0.35), 4px 4px 3px rgba(0,0,0,0.3);
 }
 .btn-line:hover { background-color: #05a547; color: #fff; }
 
@@ -297,7 +297,6 @@ ul, ol { list-style: none; }
 .hero-phone {
   font-family: var(--font-phone);
   font-size: var(--text-phone);
-  font-weight: 700;
   color: #FFE08A;
   letter-spacing: -0.01em;
   display: block;
@@ -306,7 +305,7 @@ ul, ol { list-style: none; }
 }
 .hero-phone:hover { color: #fff; text-decoration: none; }
 .hero-phone-label {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   opacity: 0.8;
   display: block;
   margin-bottom: 24px;
@@ -317,7 +316,7 @@ ul, ol { list-style: none; }
   justify-content: center;
   gap: 8px 20px;
   margin-top: 28px;
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
 }
 .hero-checks li::before { content: '✓ '; color: #6DC49A; font-weight: 700; }
 
@@ -336,9 +335,10 @@ ul, ol { list-style: none; }
   transition: transform 0.2s;
 }
 .feature-card:hover { transform: translateY(-4px); }
-.feature-icon { font-size: 44px; margin-bottom: 12px; }
+.feature-icon { margin-bottom: 12px; }
+.feature-icon .material-symbols-outlined { font-size: 38px; } /* 実測で縦32px相当（Google FontsのCDN側で font-size:24px が直指定されているため、子孫セレクタで明示的に上書きする必要がある） */
 .feature-title { font-size: var(--text-xl); font-weight: 700; color: var(--color-primary); margin-bottom: 8px; }
-.feature-text { font-size: var(--text-sm); color: var(--color-text-secondary); line-height: 1.65; }
+.feature-text { font-size: var(--text-base); color: var(--color-text-secondary); line-height: 1.65; }
 
 /* ----- ステップ ----- */
 .steps {
@@ -376,7 +376,7 @@ ul, ol { list-style: none; }
   margin-bottom: 12px;
 }
 .step-title { font-weight: 700; color: var(--color-text); margin-bottom: 6px; }
-.step-text { font-size: var(--text-sm); color: var(--color-text-secondary); }
+.step-text { font-size: var(--text-base); color: var(--color-text-secondary); }
 
 /* ----- CTAバナー ----- */
 .cta-banner {
@@ -390,7 +390,6 @@ ul, ol { list-style: none; }
 .cta-phone {
   font-family: var(--font-phone);
   font-size: var(--text-phone);
-  font-weight: 700;
   color: #FFE08A;
   letter-spacing: -0.01em;
   display: block;
@@ -398,7 +397,7 @@ ul, ol { list-style: none; }
   text-decoration: none;
 }
 .cta-phone:hover { color: #fff; text-decoration: none; }
-.cta-hour { font-size: var(--text-sm); opacity: 0.75; margin-bottom: 24px; }
+.cta-hour { font-size: var(--text-base); opacity: 0.75; margin-bottom: 24px; }
 
 /* ----- テーブル ----- */
 .price-table {
@@ -587,6 +586,25 @@ ul, ol { list-style: none; }
   gap: 20px;
 }
 
+/* ----- 機材・装備カード（画像プレースホルダー） ----- */
+.equipment-photo {
+  aspect-ratio: 4 / 3;
+  background: var(--color-bg-light);
+  border: 1px dashed var(--color-border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+}
+.equipment-photo .material-symbols-outlined { font-size: 36px; }
+.equipment-photo-label { font-size: var(--text-xs); }
+.equipment-name { font-size: var(--text-xl); font-weight: 700; color: var(--color-primary); margin-bottom: 6px; }
+.equipment-desc { font-size: var(--text-base); color: var(--color-text-secondary); }
+
 /* ----- 区切り装飾 ----- */
 .section-divider {
   text-align: center;
@@ -638,7 +656,7 @@ ul, ol { list-style: none; }
 
 /* ----- 注意書き ----- */
 .note {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-muted);
   padding-left: 1em;
   text-indent: -1em;
@@ -653,7 +671,7 @@ ul, ol { list-style: none; }
 }
 .note-box .note { padding-left: 0; text-indent: 0; }
 .note-box .note::before { content: ''; }
-.note-box li { font-size: var(--text-sm); color: var(--color-text-secondary); padding: 3px 0 3px 1.2em; position: relative; }
+.note-box li { font-size: var(--text-base); color: var(--color-text-secondary); padding: 3px 0 3px 1.2em; position: relative; }
 .note-box li::before { content: '・'; position: absolute; left: 0; }
 
 /* ----- シーンカード ----- */
@@ -685,7 +703,7 @@ ul, ol { list-style: none; }
   text-align: center;
 }
 .cta-bar-label {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--color-text-muted);
   margin-bottom: 6px;
   letter-spacing: 0.02em;
