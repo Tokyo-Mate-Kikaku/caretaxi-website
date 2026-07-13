@@ -5,13 +5,11 @@
 /* ----- CSS変数 ----- */
 :root {
   --color-primary:       #2E9E5F;
-  --color-primary-light: #5FBF8A;
   --color-primary-dark:  #1E7A47;
   --color-accent:        #E8752A;
   --color-accent-light:  #F5A46B;
   --color-accent-dark:   #C45A16;
   --color-sub:           #1A6FA8;
-  --color-sub-light:     #4A9FD4;
   --color-text:          #333333;
   --color-text-secondary:#666666;
   --color-text-muted:    #999999;
@@ -34,7 +32,6 @@
 
   --leading-tight:  1.4;
   --leading-normal: 1.75;
-  --tracking-wide:  0.05em;
 
   --radius: 6px;
   --shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -75,7 +72,6 @@ ul, ol { list-style: none; }
 .section { padding: 56px 0; }
 .section-alt { background: var(--color-bg-light); }
 .section-warm { background: var(--color-bg-warm); }
-.section-primary { background: var(--color-primary); color: #fff; }
 
 .section-title {
   text-align: center;
@@ -232,14 +228,6 @@ ul, ol { list-style: none; }
   box-shadow: 0 4px 14px rgba(6,199,85,0.35), 4px 4px 3px rgba(0,0,0,0.3);
 }
 .btn-line:hover { background-color: #05a547; color: #fff; }
-
-.btn-outline {
-  background: transparent;
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
-  box-shadow: 4px 4px 4px rgba(0,0,0,0.3);
-}
-.btn-outline:hover { background: var(--color-primary); color: #fff; }
 
 .btn-group {
   display: flex;
