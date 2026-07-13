@@ -118,8 +118,8 @@ ul, ol { list-style: none; }
   flex-shrink: 0;
 }
 .site-logo-icon {
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -340,7 +340,7 @@ ul, ol { list-style: none; }
 /* ----- ステップ ----- */
 .steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: 1fr;
   gap: 0;
   position: relative;
 }
@@ -351,6 +351,7 @@ ul, ol { list-style: none; }
 }
 .step::after {
   content: '›';
+  display: none;
   position: absolute;
   right: -8px;
   top: 50%;
@@ -732,6 +733,10 @@ ul, ol { list-style: none; }
    PC レスポンシブ
    ============================================================ */
 @media (min-width: 768px) {
+  .site-logo-icon { width: 48px; height: 48px; }
+  .steps { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .step::after { display: block; }
+  .step:last-child::after { display: none; }
   .site-nav { display: block; }
   .nav-toggle { display: none; }
   .header-phone { display: flex; }
