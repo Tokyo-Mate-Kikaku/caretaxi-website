@@ -299,6 +299,7 @@ ul, ol { list-style: none; }
   font-family: var(--font-phone);
   font-size: var(--text-phone);
   color: #FFE08A;
+  letter-spacing: 0;
   display: block;
   margin-bottom: 4px;
   text-decoration: none;
@@ -392,6 +393,7 @@ ul, ol { list-style: none; }
   font-family: var(--font-phone);
   font-size: var(--text-phone);
   color: #FFE08A;
+  letter-spacing: 0;
   display: block;
   margin-bottom: 4px;
   text-decoration: none;
@@ -494,9 +496,10 @@ ul, ol { list-style: none; }
 .breadcrumb {
   padding: 12px 0;
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: #fff;
+  opacity: 0.85;
 }
-.breadcrumb a { color: var(--color-primary); }
+.breadcrumb a { color: #fff; text-decoration: underline; }
 .breadcrumb span + span::before { content: ' › '; }
 
 /* ----- ページヘッダー ----- */
@@ -758,6 +761,7 @@ ul, ol { list-style: none; }
    ============================================================ */
 @media (min-width: 768px) {
   .site-logo-icon { width: 48px; height: 48px; }
+  .site-logo-typo { height: 48px; }
   .steps { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
   .step::after { display: block; }
   .step:last-child::after { display: none; }
