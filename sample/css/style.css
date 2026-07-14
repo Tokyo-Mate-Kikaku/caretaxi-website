@@ -656,6 +656,26 @@ ul, ol { list-style: none; }
   color: rgba(255,255,255,0.5);
   text-align: center;
 }
+.footer-copy a { color: rgba(255,255,255,0.7); text-decoration: underline; }
+.footer-copy a:hover { color: #fff; }
+
+/* ----- プライバシーポリシー ----- */
+.policy-intro { margin-bottom: 28px; line-height: var(--leading-normal); }
+.policy-article { margin-bottom: 28px; }
+.policy-article:last-child { margin-bottom: 0; }
+.policy-article h2 {
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-border);
+}
+.policy-article p { line-height: var(--leading-normal); margin-bottom: 10px; }
+.policy-article p:last-child { margin-bottom: 0; }
+.policy-list { margin: 8px 0 0; }
+.policy-list li { position: relative; padding: 4px 0 4px 1.2em; line-height: var(--leading-normal); }
+.policy-list li::before { content: '・'; position: absolute; left: 0; color: var(--color-primary); }
+.policy-date { margin-top: 32px; text-align: right; color: var(--color-text-muted); font-size: var(--text-sm); }
 
 /* ----- 注意書き ----- */
 .note {
