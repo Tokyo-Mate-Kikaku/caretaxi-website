@@ -125,7 +125,10 @@ ul, ol { list-style: none; }
   border-radius: 10px;
   object-fit: cover;
 }
-.site-logo span { color: var(--color-accent-light); }
+.site-logo-typo {
+  height: 36px;
+  width: auto;
+}
 
 .header-phone {
   display: none; /* モバイルでは非表示。ヒーローに大きな電話番号があるため */
@@ -296,7 +299,6 @@ ul, ol { list-style: none; }
   font-family: var(--font-phone);
   font-size: var(--text-phone);
   color: #FFE08A;
-  letter-spacing: -0.01em;
   display: block;
   margin-bottom: 4px;
   text-decoration: none;
@@ -390,7 +392,6 @@ ul, ol { list-style: none; }
   font-family: var(--font-phone);
   font-size: var(--text-phone);
   color: #FFE08A;
-  letter-spacing: -0.01em;
   display: block;
   margin-bottom: 4px;
   text-decoration: none;
@@ -680,13 +681,35 @@ ul, ol { list-style: none; }
   gap: 16px;
 }
 .scene-card {
-  background: var(--color-bg-light);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 160px;
+  background-color: var(--color-bg-light);
+  background-size: cover;
+  background-position: center;
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 64px 20px 24px;
   text-align: center;
+  overflow: hidden;
+  color: #fff;
+  isolation: isolate;
 }
-.scene-icon { font-size: 36px; margin-bottom: 8px; }
-.scene-title { font-weight: 700; font-size: var(--text-base); }
+.scene-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55));
+  z-index: -1;
+}
+.scene-card--hospital { background-image: url('../img/hospital_commute.webp'); }
+.scene-card--carehouse { background-image: url('../img/carehouse.webp'); }
+.scene-card--bride { background-image: url('../img/bride.webp'); }
+.scene-card--airport { background-image: url('../img/airport.webp'); }
+.scene-card--shop { background-image: url('../img/shop.webp'); }
+.scene-card--rehab { background-image: url('../img/rehab.webp'); }
+.scene-title { font-weight: 700; font-size: var(--text-base); text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); }
 
 /* ----- モバイル固定CTAバー ----- */
 .mobile-cta-bar {
