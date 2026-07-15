@@ -96,12 +96,12 @@
   </div>
 </section>
 
-<!-- 基本料金 -->
+<!-- 運賃 -->
 <section class="section">
   <div class="container">
     <div class="section-divider">
-      <h2 class="section-title">基本料金（メーター制）</h2>
-      <p class="section-subtitle">距離に応じた分かりやすいメーター制です</p>
+      <h2 class="section-title">運賃</h2>
+      <p class="section-subtitle">距離・時間に応じた分かりやすいメーター制です</p>
     </div>
     <div class="js-scrollable" style="overflow-x:auto;">
       <table class="price-table">
@@ -115,14 +115,29 @@
             <td>1kmまで</td>
           </tr>
           <tr>
-            <td>加算料金</td>
+            <td>距離加算</td>
             <td class="price-amount">200円</td>
             <td>300mごとに加算</td>
           </tr>
           <tr>
-            <td>時間超過加算</td>
+            <td>時間加算</td>
             <td class="price-amount">50円</td>
             <td>1分あたり（渋滞等による停車中）</td>
+          </tr>
+          <tr>
+            <td>迎車料金</td>
+            <td class="price-amount">500円</td>
+            <td>ご自宅・施設へのお迎え時</td>
+          </tr>
+          <tr>
+            <td>深夜・早朝割増</td>
+            <td class="price-amount">25%増</td>
+            <td>22:00〜翌5:00のご利用</td>
+          </tr>
+          <tr>
+            <td>待機料金</td>
+            <td class="price-amount">150円/分</td>
+            <td>病院・施設での待機（15分を超えた場合から）</td>
           </tr>
         </tbody>
       </table>
@@ -176,52 +191,74 @@
   </div>
   <div class="container">
     <div class="section-divider">
-      <h2 class="section-title">加算料金</h2>
-      <p class="section-subtitle">基本料金に以下の加算が発生する場合があります</p>
+      <h2 class="section-title">介助料・機材使用料</h2>
+      <p class="section-subtitle">乗降介助や機材のご利用にかかる料金です</p>
     </div>
+
+    <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-primary);margin:0 0 12px;">介助料</h3>
     <div class="js-scrollable" style="overflow-x:auto;">
       <table class="price-table">
         <thead>
-          <tr><th>加算項目</th><th>料金（税込）</th><th>条件・備考</th></tr>
+          <tr><th>項目</th><th>料金（税込）</th><th>備考</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td>迎車料金</td>
-            <td class="price-amount">500円</td>
-            <td>ご自宅・施設へのお迎え時</td>
-          </tr>
-          <tr>
-            <td>深夜・早朝割増</td>
-            <td class="price-amount">25%増</td>
-            <td>22:00〜翌5:00のご利用</td>
-          </tr>
-          <tr>
-            <td>待機料金</td>
-            <td class="price-amount">150円/分</td>
-            <td>病院・施設での待機（15分を超えた場合から）</td>
-          </tr>
-          <tr>
-            <td>乗降介助料金</td>
+            <td>乗降介助</td>
             <td class="price-amount">500円</td>
             <td>玄関先〜車両間の乗降介助</td>
           </tr>
           <tr>
-            <td>ストレッチャー使用料金</td>
+            <td>室内介助</td>
+            <td class="price-amount">1,100円</td>
+            <td>お部屋から玄関までの介助</td>
+          </tr>
+          <tr>
+            <td>階段介助</td>
+            <td class="price-amount">1,100円</td>
+            <td>1フロアあたり</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:var(--text-xl);font-weight:700;color:var(--color-primary);margin:32px 0 12px;">機材使用料</h3>
+    <div class="js-scrollable" style="overflow-x:auto;">
+      <table class="price-table">
+        <thead>
+          <tr><th>項目</th><th>料金（税込）</th><th>備考</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ストレッチャー使用料</td>
             <td class="price-amount">2,000円</td>
             <td>ストレッチャー対応車両使用時</td>
           </tr>
           <tr>
-            <td>高速道路料金</td>
-            <td class="price-amount">実費</td>
-            <td>利用した場合は実費負担</td>
+            <td>車いす</td>
+            <td class="price-amount">300円</td>
+            <td>車いすの貸出</td>
           </tr>
           <tr>
-            <td>駐車料金</td>
-            <td class="price-amount">実費</td>
-            <td>有料駐車場利用時</td>
+            <td>リクライニング車いす</td>
+            <td class="price-amount">1,000円</td>
+            <td>リクライニング車いすの貸出</td>
+          </tr>
+          <tr>
+            <td>階段昇降機</td>
+            <td class="price-amount">3,000円</td>
+            <td>階段昇降機の使用</td>
           </tr>
         </tbody>
       </table>
+    </div>
+
+    <!-- 備考 -->
+    <div class="note-box" style="margin-top:28px;background:var(--color-bg);">
+      <h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:8px;color:var(--color-text);">備考</h3>
+      <ul>
+        <li>有料道路（高速道路など）を利用した場合は、通行料金を実費で申し受けます。</li>
+        <li>有料駐車場を利用した場合は、駐車料金を実費で申し受けます。</li>
+      </ul>
     </div>
   </div>
 </section>

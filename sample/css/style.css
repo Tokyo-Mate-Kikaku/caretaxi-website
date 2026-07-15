@@ -451,9 +451,12 @@ ul, ol { list-style: none; }
 .price-table .price-amount { font-weight: 700; color: var(--color-accent); font-size: var(--text-lg); }
 
 /* 料金表：狭い画面では横スクロールで見せ、項目名・金額の途中改行を防ぐ（説明文の最終列のみ自然折り返し） */
-.price-table { min-width: 500px; }
+/* table-layout:fixed＋列幅指定で、複数の料金表どうしの列幅を統一する */
+.price-table { min-width: 500px; table-layout: fixed; }
 .price-table th, .price-table td { white-space: nowrap; vertical-align: middle; }
-.price-table th:last-child, .price-table td:last-child { white-space: normal; min-width: 180px; }
+.price-table th:nth-child(1), .price-table td:nth-child(1) { width: 34%; white-space: normal; }
+.price-table th:nth-child(2), .price-table td:nth-child(2) { width: 24%; }
+.price-table th:last-child, .price-table td:last-child { width: 42%; white-space: normal; }
 
 /* 料金の目安（参考）テーブル：狭い画面では横スクロールで見せ、金額・ラベルの途中改行を防ぐ */
 .fare-guide { min-width: 460px; }
@@ -713,8 +716,8 @@ ul, ol { list-style: none; }
 .note::before { content: '※ '; }
 .note-box {
   background: var(--color-bg-light);
-  border-left: 4px solid var(--color-border);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
   padding: 16px 20px;
   margin-top: 16px;
 }
