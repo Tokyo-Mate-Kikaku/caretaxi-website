@@ -338,6 +338,7 @@ ul, ol { list-style: none; }
 .feature-card:hover { transform: translateY(-4px); }
 .feature-icon { margin-bottom: 12px; }
 .feature-icon .material-symbols-outlined { font-size: 38px; } /* 実測で縦32px相当（Google FontsのCDN側で font-size:24px が直指定されているため、子孫セレクタで明示的に上書きする必要がある） */
+.feature-icon img { width: 38px; height: 38px; display: inline-block; vertical-align: middle; }
 .feature-title { font-size: var(--text-xl); font-weight: 700; color: var(--color-primary); margin-bottom: 8px; }
 .feature-text { font-size: var(--text-base); color: var(--color-text-secondary); line-height: 1.65; }
 
