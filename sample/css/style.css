@@ -293,7 +293,7 @@ ul, ol { list-style: none; }
   background:
     linear-gradient(to bottom, rgba(0,0,0,0) 65%, var(--color-primary-dark) 100%),
     linear-gradient(to bottom, rgba(40,40,40,0) 0%, rgba(40,40,40,0.3) 100%),
-    url('../img/fv_16-10.webp') center/cover no-repeat;
+    url('../img/hero.webp') center/cover no-repeat;
 }
 .hero-inner { position: relative; z-index: 1; }
 .hero-badge {
@@ -540,7 +540,7 @@ ul, ol { list-style: none; }
   color: #fff;
   padding: 40px 0 36px;
   overflow: hidden;
-  background: url('../img/fv_16-10.webp') center/cover no-repeat;
+  background: url('../img/hero.webp') center/cover no-repeat;
 }
 .page-hero::before {
   content: '';
@@ -758,12 +758,12 @@ ul, ol { list-style: none; }
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55));
   z-index: -1;
 }
-.scene-card--hospital { background-image: url('../img/hospital_commute.webp'); }
-.scene-card--carehouse { background-image: url('../img/carehouse.webp'); }
-.scene-card--bride { background-image: url('../img/bride.webp'); }
-.scene-card--airport { background-image: url('../img/airport.webp'); }
-.scene-card--shop { background-image: url('../img/shop.webp'); }
-.scene-card--rehab { background-image: url('../img/rehab.webp'); }
+.scene-card--hospital { background-image: url('../img/scene_01.webp'); }
+.scene-card--carehouse { background-image: url('../img/scene_02.webp'); }
+.scene-card--bride { background-image: url('../img/scene_03.webp'); }
+.scene-card--airport { background-image: url('../img/scene_04.webp'); }
+.scene-card--shop { background-image: url('../img/scene_05.webp'); }
+.scene-card--rehab { background-image: url('../img/scene_06.webp'); }
 .scene-title { font-weight: 700; font-size: var(--text-base); text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5); }
 
 /* ----- モバイル固定CTAバー ----- */
@@ -829,7 +829,7 @@ ul, ol { list-style: none; }
   .hero {
     padding: 80px 0 72px;
     text-align: left;
-    background: url('../img/fv_16-10.webp') center/cover no-repeat;
+    background: url('../img/hero.webp') center/cover no-repeat;
   }
   .hero::before {
     content: '';
