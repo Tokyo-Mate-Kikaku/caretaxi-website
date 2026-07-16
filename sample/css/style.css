@@ -48,6 +48,10 @@
 .btn .material-symbols-outlined { font-size: 22px; }
 .cta-bar-btn .material-symbols-outlined { font-size: 22px; }
 .header-phone .material-symbols-outlined { font-size: 18px; }
+/* 単体表示アイコン（カード見出し等）を大きく。font-sizeで拡大するので縦横比は1:1のまま。
+   ※ Google FontsのCDNが .material-symbols-outlined に font-size:24px を直指定するため、
+   親のfont-sizeでは効かない。複合セレクタ（.material-symbols-outlined.icon-xl）で確実に上書きする */
+.material-symbols-outlined.icon-xl { font-size: 48px; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48; }
 
 /* ----- リセット・ベース ----- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -640,7 +644,7 @@ ul, ol { list-style: none; }
   color: var(--color-text-muted);
   margin-bottom: 14px;
 }
-.equipment-photo .material-symbols-outlined { font-size: 36px; }
+.equipment-photo .material-symbols-outlined { font-size: 48px; }
 .equipment-photo-label { font-size: var(--text-xs); }
 /* 車両写真（横長）：本来の比率で表示 */
 .vehicle-photo { width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 14px; }
