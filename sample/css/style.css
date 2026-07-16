@@ -408,7 +408,10 @@ ul, ol { list-style: none; }
 
 /* ----- CTAバナー ----- */
 .cta-banner {
-  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  /* 手前にキーカラー（グリーン）の半透明フィルター、奥に写真 */
+  background:
+    linear-gradient(135deg, rgba(30,122,71,0.72), rgba(46,158,95,0.66)),
+    url('../img/cta.webp') center/cover no-repeat;
   color: #fff;
   padding: 48px 0;
   text-align: center;
