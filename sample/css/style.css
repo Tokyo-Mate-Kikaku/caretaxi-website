@@ -574,6 +574,11 @@ ul, ol { list-style: none; }
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
+/* 運営者情報：サービス風景の2枚組 */
+.about-photos { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.about-photos img { width: 100%; height: auto; border-radius: var(--radius); display: block; }
+@media (min-width: 768px) { .about-photos { grid-template-columns: 1fr 1fr; } }
+
 /* ----- バッジ ----- */
 .badge {
   display: inline-flex;
