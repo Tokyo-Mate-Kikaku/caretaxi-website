@@ -637,6 +637,8 @@ ul, ol { list-style: none; }
 }
 .equipment-photo .material-symbols-outlined { font-size: 36px; }
 .equipment-photo-label { font-size: var(--text-xs); }
+/* 車両写真（横長）：本来の比率で表示 */
+.vehicle-photo { width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 14px; }
 .equipment-name { font-size: var(--text-xl); font-weight: 700; color: var(--color-primary); margin-bottom: 6px; }
 .equipment-desc { font-size: var(--text-base); color: var(--color-text-secondary); }
 
